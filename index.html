@@ -5,12 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheshire County</title>
+    <!-- Swiper.js css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!-- Custom css -->
     <link rel="stylesheet" href="app/css/style.css" />
+
+    <!-- Swiper.js script -->
+    <script
+      src="https://unpkg.com/swiper@7/swiper-bundle.min.js"
+      defer
+    ></script>
+
+    <!-- Custom script -->
     <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Navbar -->
-    <!-- <nav>
+    <nav>
       <div class="nav-wrapper">
         <img
           src="./app/content/navbar/cheshire-county-hygiene-services.png"
@@ -24,9 +38,9 @@
           <a href="#">Contact</a>
         </div>
       </div>
-    </nav> -->
+    </nav>
     <!-- Main -->
-    <!-- <main>
+    <main>
       <div class="main-wrapper">
         <section class="main-left">
           <img
@@ -87,9 +101,9 @@
           </form>
         </section>
       </div>
-    </main> -->
+    </main>
     <!-- Social -->
-    <!-- <section id="social">
+    <section id="social">
       <div class="text">
         <h3>Social media</h3>
         <p>
@@ -107,9 +121,9 @@
           alt=""
         />
       </div>
-    </section> -->
+    </section>
     <!-- Tabs -->
-    <!-- <section id="tabs">
+    <section id="tabs">
       <div id="tabs-wrapper">
         <div id="tabs-buttons">
           <button><div>REGISTER</div></button>
@@ -149,9 +163,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- Article -->
-    <!-- <article>
+    <article>
       <div class="article-wrapper">
         <img
           class="logo"
@@ -196,9 +210,9 @@
           </div>
         </div>
       </div>
-    </article> -->
+    </article>
     <!-- Sale section -->
-    <!-- <section id="sale">
+    <section id="sale">
       <h2>WHY THIS IS AWESOME</h2>
       <img
         src="./app/content/sale/divider_orange_u7 copy 3.svg"
@@ -235,9 +249,9 @@
           <p>Proin gravida dolor sit amet lacus accumsan et viverra.</p>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- Pricing section -->
-    <!-- <section id="pricing">
+    <section id="pricing">
       <h2>PRICING OPTIONS</h2>
       <img
         src="./app/content/pricing/divider_orange_u7 copy.svg"
@@ -296,10 +310,153 @@
           </ul>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- Reviews section -->
     <section id="reviews">
       <h2>WHAT OUR CUSTOMERS ARE SAYING</h2>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide slide-1">
+            <div class="review-card">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Doloribus accusamus expedita repellat similique odio aspernatur
+                ex.
+              </p>
+              <div class="review-author">
+                <img
+                  src="./app/content/reviews/avatar_2_u231.png"
+                  alt="author-pic"
+                />
+                <div class="review-author-info">
+                  <h3>Jeremy H.</h3>
+                  <h6>Manager</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide slide-2">
+            <div class="review-card">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Doloribus accusamus expedita.
+              </p>
+              <div class="review-author">
+                <img
+                  src="./app/content/reviews/avatar_2_u231.png"
+                  alt="author-pic"
+                />
+                <div class="review-author-info">
+                  <h3>John S.</h3>
+                  <h6>Freelancer</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide slide-3">
+            <div class="review-card">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Doloribus accusamus expedita repellat similique odio aspernatur
+                ex.
+              </p>
+              <div class="review-author">
+                <img
+                  src="./app/content/reviews/avatar_2_u231.png"
+                  alt="author-pic"
+                />
+                <div class="review-author-info">
+                  <h3>Susan W.</h3>
+                  <h6>Photographer</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide slide-4">
+            <div class="review-card">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Doloribus accusamus expedita.
+              </p>
+              <div class="review-author">
+                <img
+                  src="./app/content/reviews/avatar_2_u231.png"
+                  alt="author-pic"
+                />
+                <div class="review-author-info">
+                  <h3>Jennifer L.</h3>
+                  <h6>Copywriter</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </section>
+    <!-- Contact Us -->
+    <section id="contact">
+      <h2>CONTACT US</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <form>
+        <div class="form-wrapper">
+          <label for="fname"></label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            required
+            placeholder="First Name"
+          />
+          <label for="lname"></label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            required
+            placeholder="Last Name"
+          />
+          <label for="phone"></label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            required
+            placeholder="Phone Number"
+          />
+          <div class="contact-separator">
+            <input type="radio" name="contact" id="personal" value="personal" />
+            <label for="monthly">PERSONAL</label>
+            <input type="radio" name="contact" id="personal" value="personal" />
+            <label for="yearly">COMPANY</label><br />
+          </div>
+          <button type="submit">SEND</button>
+        </div>
+      </form>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-icons">
+          <img src="./app/content/social/facebook-logo.svg" alt="facebook" />
+          <img src="./app/content/social/instagram-logo.svg" alt="instagram" />
+          <img src="./app/content/social/twitter.svg" alt="twitter" />
+          <img src="./app/content/social/pinterest.svg" alt="pinterest" />
+          <img
+            src="./app/content/social/wifi-signal-svgrepo-com.svg"
+            alt="signal"
+          />
+        </div>
+        <p>© 2019 Cheshire County</p>
+      </div>
+    </footer>
   </body>
 </html>

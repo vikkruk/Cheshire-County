@@ -1,0 +1,32 @@
+footer {
+  background-color: $black-accent;
+  height: 124px;
+  padding: 50px 30px;
+  width: 100%;
+
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    .footer-icons {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+
+      img {
+        align-self: center;
+        height: 20px;
+        width: 20px;
+      }
+    }
+    p {
+      color: #ffffff;
+      font-size: 1.8rem;
+      opacity: 0.5;
+    }
+  }
+}
