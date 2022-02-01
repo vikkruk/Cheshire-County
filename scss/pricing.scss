@@ -1,0 +1,93 @@
+#pricing {
+  background-color: $blue-accent;
+  padding: 90px 30px 50px 30px;
+  text-align: center;
+  h2 {
+    color: white;
+    font-size: 3.6rem;
+    font-weight: 600;
+  }
+  img {
+    margin: 30px;
+  }
+
+  .pricing-text {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 70px;
+  }
+
+  .pricing-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 30px auto;
+    max-width: 1100px;
+
+    .card {
+      width: 340px;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      h4 {
+        background-color: $black-accent;
+        border-radius: 5px 5px 0 0;
+        color: white;
+        font-size: 2rem;
+        font-weight: 400;
+        height: 59px;
+        line-height: 3.5rem;
+        padding: 10px 0;
+      }
+
+      h3 {
+        background-color: $black-accent;
+        color: white;
+        font-size: 3.8rem;
+        font-weight: 400;
+        height: 100px;
+        line-height: 6.5rem;
+
+        span {
+          font-size: 9.4rem;
+        }
+      }
+      h5 {
+        background-color: $black-accent;
+        color: #ffffff85;
+        font-size: 1.4rem;
+        font-weight: 400;
+        height: 51px;
+        line-height: 5rem;
+      }
+
+      img {
+        margin: 0px 0px;
+        width: 340px;
+      }
+
+      p {
+        background-color: $green-accent;
+        color: white;
+        font-size: 1.4rem;
+
+        height: 40px;
+        line-height: 40px;
+      }
+      ul {
+        background-color: white;
+        border-radius: 0 0 5px 5px;
+        list-style: none;
+
+        li {
+          color: #86878b;
+          font-size: 1.4rem;
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}

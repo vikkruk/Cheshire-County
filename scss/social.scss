@@ -1,0 +1,30 @@
+#social {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 100px;
+
+  .text {
+    max-width: 390px;
+    h3 {
+      color: #333333;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.4rem;
+      color: #86878b;
+    }
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 50%;
+
+    img {
+      align-self: center;
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
