@@ -5,6 +5,7 @@
     color: $black-accent;
     font-size: 3.6rem;
     font-weight: 600;
+    margin: 0 auto;
     text-align: center;
     padding-bottom: 20px;
     position: relative;
@@ -82,12 +83,16 @@
     }
 
     .swiper-pagination-bullet {
-      height: 10px;
-      width: 10px;
+      height: 20px;
+      width: 20px;
       border: 1px solid $red-accent;
       background-color: white;
       margin-right: 10px;
-      transition: 0.3s;
+      transition: 0.5s;
+
+      &:hover {
+        cursor: $hand-cursor;
+      }
     }
 
     .swiper-pagination-bullet-active {
@@ -110,5 +115,11 @@
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
+  }
+}
+
+@media (max-width: 755px) {
+  h2::before {
+    left: 42% !important;
   }
 }

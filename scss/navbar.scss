@@ -1,20 +1,127 @@
-nav {
+#top-menu {
   background-color: $black-accent;
-  padding: 10px 100px;
+  padding: 10px 30px;
 
   .nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1100px;
 
     div {
       display: flex;
       align-items: center;
+
+      .burger {
+        display: none;
+        height: 40px;
+      }
       a {
         text-decoration: none;
         color: #ffffff;
         margin-left: 30px;
         font-size: 1.4rem;
+        position: relative;
+
+        &::before {
+          background-color: $red-accent;
+          border-radius: 2px;
+          content: "";
+          display: none;
+          bottom: -37px;
+          left: 2px;
+          height: 5px;
+          width: 100%;
+          position: absolute;
+          transition: transform 1s linear 1s;
+        }
+
+        &:hover::before {
+          display: block;
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+}
+
+#side-menu {
+  background-color: $black-accent;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-200px);
+  transition: all 0.5s;
+  width: 200px;
+  z-index: 2;
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+    height: 5vh;
+    margin-left: 20px;
+    padding: 20px auto;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      background-color: $red-accent;
+      border-radius: 5px;
+      content: "";
+      display: none;
+      top: -3px;
+      left: -100px;
+      height: 50%;
+      width: 50%;
+      position: absolute;
+      transition: all 0.5s !important;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      display: block;
+      transform: translateX(90px) !important;
+    }
+  }
+}
+
+// JS classes
+
+.rotate {
+  transform: rotate(90deg);
+}
+.visible {
+  transform: translateX(0px) !important;
+}
+.selected-link {
+  font-weight: 800;
+
+  &::after {
+    background-color: $red-accent;
+    border-radius: 5px;
+    content: "";
+    top: -3px;
+    left: -10px;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    .nav-wrapper {
+      flex-direction: row-reverse;
+      div {
+        .burger {
+          display: block !important;
+        }
+        a {
+          display: none;
+        }
       }
     }
   }

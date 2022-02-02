@@ -11,9 +11,17 @@ article {
 
     .logo {
       width: 40%;
+
+      // height: 170px;
     }
 
     .article-right {
+      p {
+        color: white;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 40px;
+      }
       h2 {
         color: white;
         font-size: 3rem;
@@ -52,5 +60,15 @@ article {
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .article-wrapper {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 80% !important;
   }
 }

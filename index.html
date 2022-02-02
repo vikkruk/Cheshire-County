@@ -24,13 +24,18 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav>
+    <nav id="top-menu">
       <div class="nav-wrapper">
         <img
           src="./app/content/navbar/cheshire-county-hygiene-services.png"
           alt="logo-navbar"
         />
         <div>
+          <img
+            class="burger"
+            src="./app/content/navbar/bars-solid.svg"
+            alt="burger"
+          />
           <a href="#">Features</a>
           <a href="#">About</a>
           <a href="#">Pricing</a>
@@ -39,8 +44,15 @@
         </div>
       </div>
     </nav>
+    <nav id="side-menu">
+      <a class="nav-link" href="#">Features</a>
+      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="#">Pricing</a>
+      <a class="nav-link" href="#">Reviews</a>
+      <a class="nav-link" href="#">Contact</a>
+    </nav>
     <!-- Main -->
-    <main>
+    <!-- <main>
       <div class="main-wrapper">
         <section class="main-left">
           <img
@@ -74,6 +86,8 @@
                 id="fname"
                 required
                 placeholder="First Name"
+                oninvalid="this.setCustomValidity('Enter Your First Name Please')"
+                oninput="this.setCustomValidity('')"
               />
               <label for="lname"></label>
               <input
@@ -82,6 +96,8 @@
                 id="lname"
                 required
                 placeholder="Last Name"
+                oninvalid="this.setCustomValidity('Enter Your Last Name Please')"
+                oninput="this.setCustomValidity('')"
               />
               <label for="phone"></label>
               <input
@@ -90,45 +106,70 @@
                 id="phone"
                 required
                 placeholder="Phone Number"
+                oninvalid="this.setCustomValidity('Enter Your Phone Number Please')"
+                oninput="this.setCustomValidity('')"
               />
               <h4>Type of subscription</h4>
-              <input type="radio" name="sub" id="monthly" value="monthly" />
+              <input
+                type="radio"
+                name="sub"
+                id="monthly"
+                value="monthly"
+                required
+              />
               <label for="monthly">MONTHLY</label>
-              <input type="radio" name="sub" id="yearly" value="yearly" />
+              <input
+                type="radio"
+                name="sub"
+                id="yearly"
+                value="yearly"
+                required
+              />
               <label for="yearly">YEARLY</label>
             </div>
             <button type="submit">GET STARTED</button>
           </form>
         </section>
       </div>
-    </main>
+    </main> -->
     <!-- Social -->
-    <section id="social">
-      <div class="text">
-        <h3>Social media</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-          euismod bibendum laoreet.
-        </p>
+    <!-- <section id="social">
+      <div class="social-wrapper">
+        <div class="text">
+          <h3>Social media</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            euismod bibendum laoreet.
+          </p>
+        </div>
+        <div class="icons">
+          <a href=""
+            ><img src="./app/content/social/facebook-logo.svg" alt=""
+          /></a>
+          <a href=""
+            ><img src="./app/content/social/instagram-logo.svg" alt=""
+          /></a>
+          <a href=""><img src="./app/content/social/twitter.svg" alt="" /></a>
+          <a href=""><img src="./app/content/social/pinterest.svg" alt="" /></a>
+          <a href=""
+            ><img src="./app/content/social/signal-social.svg" alt=""
+          /></a>
+        </div>
       </div>
-      <div class="icons">
-        <img src="/app/content/social/facebook-logo.svg" alt="" />
-        <img src="/app/content/social/instagram-logo.svg" alt="" />
-        <img src="/app/content/social/twitter.svg" alt="" />
-        <img src="/app/content/social/pinterest.svg" alt="" />
-        <img
-          src="/app/content/social/connection-signal-svgrepo-com.svg"
-          alt=""
-        />
-      </div>
-    </section>
+    </section> -->
     <!-- Tabs -->
-    <section id="tabs">
+    <!-- <section id="tabs">
       <div id="tabs-wrapper">
         <div id="tabs-buttons">
-          <button><div>REGISTER</div></button>
-          <button><div>APPLY</div></button>
-          <button><div>RECEIVE</div></button>
+          <button class="tab-btn" onclick="changeTab(0)">
+            <div>REGISTER</div>
+          </button>
+          <button class="tab-btn" onclick="changeTab(1)">
+            <div>APPLY</div>
+          </button>
+          <button class="tab-btn" onclick="changeTab(2)">
+            <div>RECEIVE</div>
+          </button>
         </div>
         <div id="tabs-first" class="tabs-content">
           <div id="tabs-text">
@@ -162,10 +203,106 @@
             />
           </div>
         </div>
+        <div id="tabs-second" class="tabs-content">
+          <div id="tabs-text">
+            <h2>
+              Tabs with soft transitioning effect. Explained propriety of out
+              perpetual his you.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+              accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+              Cum sociis natoque penatibus et magnis dis parturient montes.<br /><br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet.
+            </p>
+          </div>
+          <div id="tabs-images">
+            <div>
+              <img
+                src="/app/content/tabs/photo-1493409137604-0901c55e4456.png"
+                alt=""
+              />
+              <img
+                src="/app/content/tabs/photo-1543364195-bfe6e4932397.png"
+                alt=""
+              />
+            </div>
+            <img
+              src="/app/content/tabs/photo-1448387473223-5c37445527e7.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div id="tabs-third" class="tabs-content">
+          <div id="tabs-text">
+            <h2>
+              Tabs with soft transitioning effect. Explained propriety of out
+              perpetual his you.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+              accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+              Cum sociis natoque penatibus et magnis dis parturient montes.<br /><br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet.
+            </p>
+          </div>
+          <div id="tabs-images">
+            <div>
+              <img
+                src="/app/content/tabs/photo-1493409137604-0901c55e4456.png"
+                alt=""
+              />
+              <img
+                src="/app/content/tabs/photo-1543364195-bfe6e4932397.png"
+                alt=""
+              />
+            </div>
+            <img
+              src="/app/content/tabs/photo-1448387473223-5c37445527e7.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div id="tabs-placeholder" class="tabs-content">
+          <div id="tabs-text">
+            <h2>
+              Tabs with soft transitioning effect. Explained propriety of out
+              perpetual his you.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+              accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+              Cum sociis natoque penatibus et magnis dis parturient montes.<br /><br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet.
+            </p>
+          </div>
+          <div id="tabs-images">
+            <div>
+              <img
+                src="/app/content/tabs/photo-1493409137604-0901c55e4456.png"
+                alt=""
+              />
+              <img
+                src="/app/content/tabs/photo-1543364195-bfe6e4932397.png"
+                alt=""
+              />
+            </div>
+            <img
+              src="/app/content/tabs/photo-1448387473223-5c37445527e7.png"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
-    </section>
+    </section> -->
     <!-- Article -->
-    <article>
+    <!-- <article>
       <div class="article-wrapper">
         <img
           class="logo"
@@ -179,6 +316,11 @@
             src="./app/content/article/divider_orange_u7 copy 4.svg"
             alt="article-divider"
           />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+            accumsan et viverra justo commodo.
+          </p>
           <div class="content-wrapper">
             <img
               class="article-icons"
@@ -210,9 +352,9 @@
           </div>
         </div>
       </div>
-    </article>
+    </article> -->
     <!-- Sale section -->
-    <section id="sale">
+    <!-- <section id="sale">
       <h2>WHY THIS IS AWESOME</h2>
       <img
         src="./app/content/sale/divider_orange_u7 copy 3.svg"
@@ -249,9 +391,9 @@
           <p>Proin gravida dolor sit amet lacus accumsan et viverra.</p>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Pricing section -->
-    <section id="pricing">
+    <!-- <section id="pricing">
       <h2>PRICING OPTIONS</h2>
       <img
         src="./app/content/pricing/divider_orange_u7 copy.svg"
@@ -310,7 +452,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Reviews section -->
     <section id="reviews">
       <h2>WHAT OUR CUSTOMERS ARE SAYING</h2>
@@ -403,7 +545,7 @@
       </div>
     </section>
     <!-- Contact Us -->
-    <section id="contact">
+    <!-- <section id="contact">
       <h2>CONTACT US</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <form>
@@ -415,6 +557,8 @@
             id="fname"
             required
             placeholder="First Name"
+            oninvalid="this.setCustomValidity('Enter Your First Name Please')"
+            oninput="this.setCustomValidity('')"
           />
           <label for="lname"></label>
           <input
@@ -423,6 +567,8 @@
             id="lname"
             required
             placeholder="Last Name"
+            oninvalid="this.setCustomValidity('Enter Your Last Name Please')"
+            oninput="this.setCustomValidity('')"
           />
           <label for="phone"></label>
           <input
@@ -431,32 +577,61 @@
             id="phone"
             required
             placeholder="Phone Number"
+            oninvalid="this.setCustomValidity('Enter Your Phone Number Please')"
+            oninput="this.setCustomValidity('')"
           />
           <div class="contact-separator">
-            <input type="radio" name="contact" id="personal" value="personal" />
+            <input
+              type="radio"
+              name="contact"
+              id="personal"
+              value="personal"
+              required
+            />
             <label for="monthly">PERSONAL</label>
-            <input type="radio" name="contact" id="personal" value="personal" />
+            <input
+              type="radio"
+              name="contact"
+              id="personal"
+              value="personal"
+              required
+            />
             <label for="yearly">COMPANY</label><br />
           </div>
           <button type="submit">SEND</button>
         </div>
       </form>
-    </section>
+    </section> -->
     <!-- Footer -->
-    <footer>
+    <!-- <footer>
       <div class="footer-wrapper">
         <div class="footer-icons">
-          <img src="./app/content/social/facebook-logo.svg" alt="facebook" />
-          <img src="./app/content/social/instagram-logo.svg" alt="instagram" />
-          <img src="./app/content/social/twitter.svg" alt="twitter" />
-          <img src="./app/content/social/pinterest.svg" alt="pinterest" />
-          <img
-            src="./app/content/social/wifi-signal-svgrepo-com.svg"
-            alt="signal"
-          />
+          <a href=""
+            ><img
+              src="./app/content/social/footer/facebook-logo.svg"
+              alt="facebook"
+          /></a>
+          <a href=""
+            ><img
+              src="./app/content/social/footer/instagram-logo.svg"
+              alt="instagram"
+          /></a>
+          <a href=""
+            ><img src="./app/content/social/footer/twitter.svg" alt="twitter"
+          /></a>
+          <a href=""
+            ><img
+              src="./app/content/social/footer/pinterest.svg"
+              alt="pinterest"
+          /></a>
+          <a href=""
+            ><img
+              src="./app/content/social/footer/signal-social.svg"
+              alt="signal"
+          /></a>
         </div>
         <p>© 2019 Cheshire County</p>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>
