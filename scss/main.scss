@@ -6,7 +6,6 @@ main {
   margin-top: -243px;
   position: relative;
   padding: 65px 30px 130px 30px;
-  z-index: -1;
 
   &::before {
     position: absolute;
@@ -200,6 +199,12 @@ main {
       }
     }
   }
+}
+
+//JS classes
+
+.zindex {
+  z-index: -1 !important;
 }
 
 @media (max-width: 800px) {

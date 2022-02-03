@@ -1,5 +1,16 @@
 #reviews {
   padding: 90px 30px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: calc(33% - 2px);
+    left: calc(56% - 64px);
+    height: 2px;
+    width: 64px;
+    background-color: $blue-accent;
+  }
 
   h2 {
     color: $black-accent;
@@ -8,26 +19,14 @@
     margin: 0 auto;
     text-align: center;
     padding-bottom: 20px;
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      left: 47%;
-      height: 2px;
-      width: 64px;
-      background-color: $blue-accent;
-    }
   }
   .swiper {
     max-width: 1300px;
     height: 400px;
 
     .swiper-wrapper {
-      transition: 2s;
       .swiper-slide {
-        width: 30%;
+        // width: 30%;
         .review-card {
           display: flex;
           flex-direction: column;
@@ -98,28 +97,5 @@
     .swiper-pagination-bullet-active {
       background-color: $red-accent;
     }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      color: $blue-accent;
-      transition: 0.3s;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  }
-}
-
-@media (min-width: 890px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
-  }
-}
-
-@media (max-width: 755px) {
-  h2::before {
-    left: 42% !important;
   }
 }
