@@ -5,6 +5,7 @@
   background-position: 40% 69%;
   padding: 114px 30px;
   position: relative;
+  scroll-margin-top: 73px;
 
   &::before {
     position: absolute;
@@ -52,6 +53,8 @@
     }
 
     .swiper3 {
+      max-width: 100%;
+      height: 100%;
       overflow: hidden;
       .swiper-wrapper {
         .swiper-slide {
@@ -84,6 +87,132 @@
                 display: flex;
                 gap: 20px;
               }
+
+              .top-images {
+                .top-left-image {
+                  height: 168px;
+                  width: 168px;
+                  background-image: url("../content/tabs/photo-1493409137604-0901c55e4456.png");
+                  position: relative;
+                  transition: all 2s;
+
+                  &::before {
+                    background-color: $red-accent;
+                    content: "";
+                    height: 152px;
+                    left: 8px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 5px;
+                    width: 152px;
+                    transition: all 0.5s;
+                  }
+
+                  &::after {
+                    color: white;
+                    content: "Explore";
+                    font-size: 2rem;
+                    font-weight: 500;
+                    left: 28%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 42%;
+                    transition: all 0.3s;
+                  }
+
+                  &:hover {
+                    cursor: $hand-cursor;
+                  }
+
+                  &:hover::before {
+                    opacity: 0.8;
+                  }
+                  &:hover::after {
+                    opacity: 1;
+                  }
+                }
+
+                .top-right-image {
+                  height: 168px;
+                  width: 168px;
+                  background-image: url("../content/tabs/photo-1543364195-bfe6e4932397.png");
+                  position: relative;
+
+                  &::before {
+                    background-color: $red-accent;
+                    content: "";
+                    height: 152px;
+                    left: 8px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 5px;
+                    width: 152px;
+                    transition: all 0.5s;
+                  }
+
+                  &::after {
+                    color: white;
+                    content: "Explore";
+                    font-size: 2rem;
+                    font-weight: 500;
+                    left: 28%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 42%;
+                    transition: all 0.3s;
+                  }
+
+                  &:hover {
+                    cursor: $hand-cursor;
+                  }
+
+                  &:hover::before {
+                    opacity: 0.8;
+                  }
+                  &:hover::after {
+                    opacity: 1;
+                  }
+                }
+              }
+              .bottom-image {
+                height: 183px;
+                width: 356px;
+                background-image: url("../content/tabs/photo-1448387473223-5c37445527e7.png");
+                position: relative;
+
+                &::before {
+                  background-color: $red-accent;
+                  content: "";
+                  height: 167px;
+                  left: 8px;
+                  opacity: 0;
+                  position: absolute;
+                  top: 5px;
+                  transition: all 0.5s;
+                  width: 339px;
+                }
+
+                &::after {
+                  color: white;
+                  content: "Explore";
+                  font-size: 2rem;
+                  font-weight: 500;
+                  left: 39%;
+                  opacity: 0;
+                  position: absolute;
+                  top: 42%;
+                }
+                &:hover {
+                  cursor: $hand-cursor;
+                }
+
+                &:hover::before {
+                  opacity: 0.8;
+                }
+                &:hover::after {
+                  opacity: 1;
+                }
+              }
             }
           }
         }
@@ -95,12 +224,73 @@
 // JS classes
 
 .tab-selected {
-  border: 3px solid white !important;
-  transform: scale(1.1) !important;
-  color: white !important;
   background: $red-accent !important;
+  border: 3px solid white !important;
+  color: white !important;
+  transform: scale(1.1) !important;
 
   & > div {
     font-weight: 800;
+  }
+}
+
+@media (max-width: 1000px) {
+  .tabs-content {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    margin-left: 50px;
+
+    #tabs-images {
+      margin-left: -7px;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #tabs {
+    padding: 60px 0px;
+    #tabs-wrapper {
+      flex-direction: column;
+      transform: scale(0.9);
+
+      #tabs-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        margin: 0 30px 30px 30px !important;
+        transform: scale(0.9);
+      }
+
+      .swiper3 {
+        width: 100% !important;
+        .swiper-slide {
+          width: 100% !important;
+          display: flex;
+          justify-content: center;
+          .tabs-content {
+            margin: 0;
+            transform: scale(1) !important;
+            max-width: 320px !important;
+            overflow: hidden;
+
+            #tabs-text {
+              h2 {
+                font-size: 3.2rem !important;
+              }
+            }
+            #tabs-images {
+              flex-direction: column-reverse !important;
+              .top-images {
+                display: flex;
+                flex-direction: column;
+              }
+              .bottom-image {
+                background-size: cover !important;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

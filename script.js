@@ -5,7 +5,7 @@ const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
   slidesPerView: 3,
-  spaceBetween: 10,
+  spaceBetween: 50,
   speed: 1000,
 
   breakpoints: {
@@ -29,30 +29,35 @@ const swiper = new Swiper(".swiper", {
 // Swiper Pricing
 const swiper2 = new Swiper(".swiper2", {
   direction: "horizontal",
-  loop: true,
+  loop: false,
   spaceBetween: 30,
   slidesPerView: 3,
 
   breakpoints: {
     1000: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
-      loop: false,
+      slidesPerGroup: 1,
     },
 
     810: {
       slidesPerView: 2,
-      loop: false,
+      slidesPerGroup: 1,
     },
 
     0: {
       slidesPerView: 1,
-      loop: false,
+      slidesPerGroup: 1,
     },
   },
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination2",
+    clickable: true,
   },
 });
 
@@ -60,39 +65,8 @@ const swiper2 = new Swiper(".swiper2", {
 const swiper3 = new Swiper(".swiper3", {
   direction: "horizontal",
   loop: true,
-  spaceBetween: 200,
+  spaceBetween: 100,
 });
-
-//Navbar - Burger
-
-// const burger = document.querySelector(".burger");
-// const sideMenu = document.getElementById("side-menu");
-// const links = document.getElementsByClassName("nav-link");
-// burger.addEventListener("click", () => {
-//   sideMenu.classList.toggle("visible");
-//   burger.classList.toggle("rotate");
-//   document.querySelector("main").classList.toggle("zindex");
-//   for (let y of links) {
-//     y.classList.remove("selected-link");
-//   }
-// });
-
-// for (let x of links) {
-//   x.addEventListener("click", function () {
-//     for (let i = 0; i < links.length; i++) {
-//       links[i].classList.remove("selected-link");
-//     }
-
-//     this.classList.add("selected-link");
-//   });
-// }
-
-// window.addEventListener("resize", () => {
-//   if (window.innerWidth > 767) {
-//     sideMenu.classList.remove("visible");
-//     burger.classList.remove("rotate");
-//   }
-// });
 
 // Tabs
 
@@ -107,3 +81,34 @@ for (let z of buttons) {
     swiper3.slideTo(index, 1000);
   });
 }
+
+// Navbar - Burger
+
+const burger = document.querySelector(".burger");
+const sideMenu = document.getElementById("side-menu");
+const links = document.getElementsByClassName("nav-link");
+burger.addEventListener("click", () => {
+  sideMenu.classList.toggle("visible");
+  burger.classList.toggle("rotate");
+  // document.querySelector("main").classList.toggle("zindex");
+  for (let y of links) {
+    y.classList.remove("selected-link");
+  }
+});
+
+for (let x of links) {
+  x.addEventListener("click", function () {
+    for (let i = 0; i < links.length; i++) {
+      links[i].classList.remove("selected-link");
+    }
+
+    this.classList.add("selected-link");
+  });
+}
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 767) {
+    sideMenu.classList.remove("visible");
+    burger.classList.remove("rotate");
+  }
+});
