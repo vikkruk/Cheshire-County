@@ -60,6 +60,7 @@ const swiper2 = new Swiper(".swiper2", {
 const swiper3 = new Swiper(".swiper3", {
   direction: "horizontal",
   loop: true,
+  spaceBetween: 200,
 });
 
 //Navbar - Burger
@@ -101,8 +102,8 @@ for (let z of buttons) {
     for (let q of buttons) {
       q.classList.remove("tab-selected");
     }
-    let index = this.getAttribute("index");
-    swiper3.slideTo(index, 1000);
+    const index = this.getAttribute("index");
     this.classList.add("tab-selected");
+    swiper3.slideTo(index, 1000);
   });
 }

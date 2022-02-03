@@ -36,7 +36,7 @@
         color: #c7c7c7;
         height: 100px;
         width: 100px;
-        transition: 0.3s;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
           transform: scale(1.1);
@@ -46,6 +46,7 @@
 
         div {
           transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+          transition: all 0.3s;
         }
       }
     }
@@ -94,9 +95,12 @@
 // JS classes
 
 .tab-selected {
-  border: 2px solid white;
+  border: 3px solid white !important;
+  transform: scale(1.1) !important;
+  color: white !important;
+  background: $red-accent !important;
 
-  & + div {
+  & > div {
     font-weight: 800;
   }
 }
