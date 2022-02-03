@@ -65,7 +65,7 @@ const swiper2 = new Swiper(".swiper2", {
 const swiper3 = new Swiper(".swiper3", {
   direction: "horizontal",
   loop: true,
-  spaceBetween: 100,
+  spaceBetween: 300,
 });
 
 // Tabs
@@ -87,14 +87,23 @@ for (let z of buttons) {
 const burger = document.querySelector(".burger");
 const sideMenu = document.getElementById("side-menu");
 const links = document.getElementsByClassName("nav-link");
+const topLinks = document.getElementsByClassName("top-link");
 burger.addEventListener("click", () => {
   sideMenu.classList.toggle("visible");
   burger.classList.toggle("rotate");
-  // document.querySelector("main").classList.toggle("zindex");
   for (let y of links) {
     y.classList.remove("selected-link");
   }
 });
+
+for (let y of topLinks) {
+  y.addEventListener("click", function () {
+    for (let i = 0; i < topLinks.length; i++) {
+      topLinks[i].classList.remove("top-link-selected");
+    }
+    this.classList.add("top-link-selected");
+  });
+}
 
 for (let x of links) {
   x.addEventListener("click", function () {
@@ -110,5 +119,8 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 767) {
     sideMenu.classList.remove("visible");
     burger.classList.remove("rotate");
+    for (let p of topLinks) {
+      p.classList.remove("top-link-selected");
+    }
   }
 });

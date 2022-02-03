@@ -3,6 +3,7 @@
   padding: 90px 30px 50px 30px;
   text-align: center;
   overflow: hidden;
+  scroll-margin-top: 73px;
   h2 {
     color: white;
     font-size: 3.6rem;
@@ -100,6 +101,22 @@
       &:hover {
         transform: scale(1.5);
       }
+    }
+    .swiper-pagination-bullet {
+      height: 20px;
+      width: 20px;
+      border: 2px solid $green-accent;
+      background-color: white;
+      margin-right: 10px;
+      transition: 0.5s;
+
+      &:hover {
+        cursor: $hand-cursor;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $black-accent;
     }
   }
 }

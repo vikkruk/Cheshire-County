@@ -2,6 +2,7 @@
   background-color: $red-accent;
   text-align: center;
   padding: 70px 30px;
+  scroll-margin-top: 73px;
   h2 {
     color: white;
     font-size: 3.6rem;
@@ -30,7 +31,7 @@
       input[type="text"],
       [type="tel"] {
         border: none;
-        border-bottom: 1px solid $black-accent;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.493);
         font-size: 1.2rem;
         line-height: 2.4rem;
         margin-top: 20px;

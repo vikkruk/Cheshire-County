@@ -63,6 +63,10 @@ article {
   }
 }
 
+#about {
+  scroll-margin-top: 73px;
+}
+
 @media (max-width: 768px) {
   .article-wrapper {
     flex-direction: column;
