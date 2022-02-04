@@ -64,7 +64,7 @@
           <img
             class="divider"
             src="app/content/main/divider_white_u72.png"
-            alt=""
+            alt="main-divider"
           />
           <p>
             Insipidity the sufficient discretion imprudence resolution sir him
@@ -76,7 +76,7 @@
         </section>
         <section class="main-right">
           <h3>Try Your <span>FREE</span> Trial Today</h3>
-          <form>
+          <form action="#">
             <div class="form-wrapper">
               <h4>Your details</h4>
               <label for="fname"></label>
@@ -86,8 +86,9 @@
                 id="fname"
                 required
                 placeholder="First Name"
-                oninvalid="this.setCustomValidity('Enter Your First Name Please')"
+                oninvalid="this.setCustomValidity('Please enter your First Name')"
                 oninput="this.setCustomValidity('')"
+                pattern="[A-Za-z]{1-30}"
               />
               <label for="lname"></label>
               <input
@@ -96,7 +97,7 @@
                 id="lname"
                 required
                 placeholder="Last Name"
-                oninvalid="this.setCustomValidity('Enter Your Last Name Please')"
+                oninvalid="this.setCustomValidity('Please enter your Last Name')"
                 oninput="this.setCustomValidity('')"
               />
               <label for="phone"></label>
@@ -106,7 +107,7 @@
                 id="phone"
                 required
                 placeholder="Phone Number"
-                oninvalid="this.setCustomValidity('Enter Your Phone Number Please')"
+                oninvalid="this.setCustomValidity('Please enter your Phone Number')"
                 oninput="this.setCustomValidity('')"
               />
               <h4>Type of subscription</h4>
@@ -144,15 +145,25 @@
         </div>
         <div class="icons">
           <a href=""
-            ><img src="./app/content/social/facebook-logo.svg" alt=""
+            ><img
+              src="./app/content/social/facebook-logo.svg"
+              alt="facebook-social"
           /></a>
           <a href=""
-            ><img src="./app/content/social/instagram-logo.svg" alt=""
+            ><img
+              src="./app/content/social/instagram-logo.svg"
+              alt="instagram-social"
           /></a>
-          <a href=""><img src="./app/content/social/twitter.svg" alt="" /></a>
-          <a href=""><img src="./app/content/social/pinterest.svg" alt="" /></a>
           <a href=""
-            ><img src="./app/content/social/signal-social.svg" alt=""
+            ><img src="./app/content/social/twitter.svg" alt="twitter-social"
+          /></a>
+          <a href=""
+            ><img
+              src="./app/content/social/pinterest.svg"
+              alt="pinterest-social"
+          /></a>
+          <a href=""
+            ><img src="./app/content/social/signal-social.svg" alt="rss-social"
           /></a>
         </div>
       </div>
@@ -404,8 +415,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
         <div class="swiper-pagination2"></div>
       </div>
     </section>
@@ -506,7 +515,7 @@
             id="fname"
             required
             placeholder="First Name"
-            oninvalid="this.setCustomValidity('Enter Your First Name Please')"
+            oninvalid="this.setCustomValidity('Please enter your First Name')"
             oninput="this.setCustomValidity('')"
           />
           <label for="lname"></label>
@@ -516,7 +525,7 @@
             id="lname"
             required
             placeholder="Last Name"
-            oninvalid="this.setCustomValidity('Enter Your Last Name Please')"
+            oninvalid="this.setCustomValidity('Please enter your Last Name')"
             oninput="this.setCustomValidity('')"
           />
           <label for="phone"></label>
@@ -526,7 +535,7 @@
             id="phone"
             required
             placeholder="Phone Number"
-            oninvalid="this.setCustomValidity('Enter Your Phone Number Please')"
+            oninvalid="this.setCustomValidity('Please enter your Last Name')"
             oninput="this.setCustomValidity('')"
           />
           <div class="contact-separator">
@@ -555,28 +564,30 @@
     <footer>
       <div class="footer-wrapper">
         <div class="footer-icons">
-          <a href=""
+          <a href="#"
             ><img
               src="./app/content/social/footer/facebook-logo.svg"
-              alt="facebook"
+              alt="facebook-footer"
           /></a>
-          <a href=""
+          <a href="#"
             ><img
               src="./app/content/social/footer/instagram-logo.svg"
-              alt="instagram"
+              alt="instagram-footer"
           /></a>
-          <a href=""
-            ><img src="./app/content/social/footer/twitter.svg" alt="twitter"
+          <a href="#"
+            ><img
+              src="./app/content/social/footer/twitter.svg"
+              alt="twitter-footer"
           /></a>
-          <a href=""
+          <a href="#"
             ><img
               src="./app/content/social/footer/pinterest.svg"
-              alt="pinterest"
+              alt="pinterest-footer"
           /></a>
-          <a href=""
+          <a href="#"
             ><img
               src="./app/content/social/footer/signal-social.svg"
-              alt="signal"
+              alt="signal-footer"
           /></a>
         </div>
         <p>© 2019 Cheshire County</p>

@@ -18,3 +18,18 @@
   font-size: 1.4rem;
   line-height: 2rem;
 }
+
+@mixin form-btn-hover {
+  color: $black-accent;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+@mixin input-radio {
+  appearance: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+  position: relative;
+}

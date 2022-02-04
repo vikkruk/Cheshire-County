@@ -67,8 +67,7 @@ main {
         &:hover {
           background-color: white;
           color: black;
-          cursor: url("/app/content/general/description-cursor-icon-with-shadow-32.png"),
-            auto;
+          cursor: pointer;
           font-weight: 800;
         }
       }
@@ -129,12 +128,7 @@ main {
           }
 
           input[type="radio"] {
-            appearance: none;
-            height: 1.6rem;
-            width: 1.6rem;
-            border: 1px solid #d8d8d8;
-            border-radius: 50%;
-            position: relative;
+            @include input-radio;
             &::before {
               position: absolute;
               content: "";
@@ -155,8 +149,7 @@ main {
             }
 
             &:hover {
-              cursor: url("/app/content/general/description-cursor-icon-with-shadow-32.png"),
-                auto;
+              cursor: pointer;
             }
 
             &:checked + label {
@@ -167,10 +160,9 @@ main {
           }
 
           label {
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 600;
             opacity: 0.5;
-            align-self: center;
           }
           label:nth-of-type(4) {
             margin-right: 30px;
@@ -184,14 +176,12 @@ main {
         color: white;
         font-size: 1.8rem;
         font-weight: 500;
+        margin-top: 20px;
         padding: 15px;
         width: 100%;
 
         &:hover {
-          color: $black-accent;
-          cursor: url("/app/content/general/description-cursor-icon-with-shadow-32.png"),
-            auto;
-          font-weight: 600;
+          @include form-btn-hover;
         }
       }
     }
@@ -216,6 +206,15 @@ main {
         margin-right: 0px !important;
         margin-bottom: 20px;
         width: 100%;
+      }
+
+      .main-right {
+        .form-wrapper {
+          padding-top: 15px !important;
+        }
+        button {
+          margin-top: 0px;
+        }
       }
     }
   }

@@ -48,13 +48,7 @@
         margin-top: 20px;
         text-align: left;
         input[type="radio"] {
-          appearance: none;
-          height: 1.6rem;
-          width: 1.6rem;
-          border: 1px solid #d8d8d8;
-          border-radius: 50%;
-          position: relative;
-
+          @include input-radio;
           &::before {
             position: absolute;
             content: "";
@@ -69,6 +63,10 @@
           &:checked {
             border: 1px solid $green-accent;
           }
+          &:hover {
+            cursor: url("/app/content/general/description-cursor-icon-with-shadow-32.png"),
+              auto;
+          }
 
           &:checked::before {
             opacity: 1;
@@ -77,10 +75,18 @@
           &:checked + label {
             color: black;
             font-weight: 600;
+            opacity: 1;
           }
         }
+
         label:nth-of-type(1) {
-          margin-right: 15px;
+          margin-right: 30px;
+          color: black;
+          opacity: 0.5;
+        }
+        label:nth-of-type(2) {
+          color: black;
+          opacity: 0.5;
         }
       }
       button {
@@ -93,6 +99,10 @@
         height: 48px;
         margin: 40px auto 0 auto;
         width: 158px;
+
+        &:hover {
+          @include form-btn-hover;
+        }
       }
     }
   }

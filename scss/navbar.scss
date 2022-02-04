@@ -18,6 +18,11 @@
       .burger {
         display: none;
         height: 40px;
+        transition: all 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
       a {
         text-decoration: none;
