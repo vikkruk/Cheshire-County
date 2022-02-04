@@ -64,8 +64,7 @@
             border: 1px solid $green-accent;
           }
           &:hover {
-            cursor: url("/app/content/general/description-cursor-icon-with-shadow-32.png"),
-              auto;
+            cursor: pointer;
           }
 
           &:checked::before {

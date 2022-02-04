@@ -18,7 +18,7 @@ footer {
         transition: 0.3s;
         &:hover {
           transform: scale(1.3);
-          cursor: $hand-cursor;
+          cursor: pointer;
         }
         img {
           align-self: center;
