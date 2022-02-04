@@ -130,7 +130,11 @@
   }
 
   .contact-separator {
-    flex-direction: column;
     gap: 10px;
+  }
+}
+@media (max-width: 300px) {
+  .contact-separator {
+    flex-direction: column;
   }
 }

@@ -112,22 +112,28 @@
                 oninput="this.setCustomValidity('')"
               />
               <h4>Type of subscription</h4>
-              <input
-                type="radio"
-                name="sub"
-                id="monthly"
-                value="monthly"
-                required
-              />
-              <label for="monthly">MONTHLY</label>
-              <input
-                type="radio"
-                name="sub"
-                id="yearly"
-                value="yearly"
-                required
-              />
-              <label for="yearly">YEARLY</label>
+              <div class="main-radio">
+                <div class="monthly">
+                  <input
+                    type="radio"
+                    name="sub"
+                    id="monthly"
+                    value="monthly"
+                    required
+                  />
+                  <label for="monthly">MONTHLY</label>
+                </div>
+                <div class="yearly">
+                  <input
+                    type="radio"
+                    name="sub"
+                    id="yearly"
+                    value="yearly"
+                    required
+                  />
+                  <label for="yearly">YEARLY</label>
+                </div>
+              </div>
             </div>
             <button type="submit" form="form1">GET STARTED</button>
           </form>

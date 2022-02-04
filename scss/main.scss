@@ -97,6 +97,19 @@ main {
         border-radius: 0 0 5px 5px;
         .form-wrapper {
           padding: 10px 50px;
+
+          .main-radio {
+            display: flex;
+            gap: 20px;
+            .monthly {
+              display: flex;
+              gap: 10px;
+            }
+            .yearly {
+              display: flex;
+              gap: 10px;
+            }
+          }
           h4 {
             color: $black-accent;
             font-size: 1.6rem;
@@ -162,10 +175,8 @@ main {
           label {
             font-size: 1rem;
             font-weight: 600;
+            margin-top: 2px;
             opacity: 0.5;
-          }
-          label:nth-of-type(4) {
-            margin-right: 30px;
           }
         }
       }
