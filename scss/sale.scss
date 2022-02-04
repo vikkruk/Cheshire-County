@@ -17,11 +17,10 @@
   }
 
   .triple {
-    display: flex;
-    justify-content: space-between;
+    @include flex-justbetween;
     gap: 30px;
     margin: 40px auto;
-    max-width: 1100px;
+    max-width: $max-width;
 
     div {
       img {
@@ -41,8 +40,7 @@
       }
       p {
         color: #86878b;
-        font-size: 1.4rem;
-        line-height: 2rem;
+        @include font14-lineheight20;
         max-width: 280px;
       }
     }

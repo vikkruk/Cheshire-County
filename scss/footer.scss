@@ -5,16 +5,13 @@ footer {
   width: 100%;
 
   .footer-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between-center;
     height: 100%;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: $max-width;
 
     .footer-icons {
-      display: flex;
-      justify-content: space-between;
+      @include flex-justbetween;
       gap: 25px;
       width: 50%;
       a {

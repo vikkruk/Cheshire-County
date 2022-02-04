@@ -11,10 +11,9 @@
   }
 
   p {
-    color: #ffffff;
-    font-size: 1.4rem;
+    color: white;
+    @include font14-lineheight20;
     font-weight: 400;
-    line-height: 2rem;
     margin-bottom: 27px;
   }
   form {
@@ -24,8 +23,7 @@
     max-width: 390px;
 
     .form-wrapper {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       padding: 33px 65px;
 
       input[type="text"],
@@ -42,7 +40,7 @@
         }
 
         &::placeholder {
-          color: #d8d8d8;
+          color: $light-gray-accent;
           padding: 7px;
         }
       }
@@ -64,12 +62,12 @@
             left: 3px;
             height: 0.8rem;
             width: 0.8rem;
-            background-color: #41d395;
+            background-color: $green-accent;
             border-radius: 50%;
             opacity: 0;
           }
           &:checked {
-            border: 1px solid #41d395;
+            border: 1px solid $green-accent;
           }
 
           &:checked::before {

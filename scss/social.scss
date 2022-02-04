@@ -3,10 +3,9 @@
   width: 100%;
 
   .social-wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include flex-justbetween;
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: $max-width;
     .text {
       max-width: 390px;
       margin-right: 20px;
@@ -21,8 +20,7 @@
     }
 
     .icons {
-      display: flex;
-      justify-content: space-between;
+      @include flex-justbetween;
       gap: 25px;
       width: 50%;
 

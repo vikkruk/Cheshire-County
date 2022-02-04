@@ -19,15 +19,14 @@
     width: 64px;
   }
   .swiper {
-    max-width: 1300px;
+    max-width: 1200px;
     height: 400px;
 
     .swiper-wrapper {
       .swiper-slide {
         // width: 30%;
         .review-card {
-          display: flex;
-          flex-direction: column;
+          @include flex-column;
           justify-content: center;
           height: 100%;
           max-width: 270px;
@@ -86,6 +85,7 @@
       background-color: white;
       margin-right: 10px;
       transition: 0.5s;
+      opacity: 1;
 
       &:hover {
         cursor: $hand-cursor;

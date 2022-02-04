@@ -1,0 +1,20 @@
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-justbetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin font14-lineheight20 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}

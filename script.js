@@ -71,6 +71,7 @@ const swiper3 = new Swiper(".swiper3", {
 // Tabs
 
 const buttons = document.getElementsByClassName("tab-btn");
+buttons[0].classList.add("tab-selected");
 for (let z of buttons) {
   z.addEventListener("click", function () {
     for (let q of buttons) {
@@ -82,12 +83,14 @@ for (let z of buttons) {
   });
 }
 
-// Navbar - Burger
+// NAVBAR
 
 const burger = document.querySelector(".burger");
 const sideMenu = document.getElementById("side-menu");
 const links = document.getElementsByClassName("nav-link");
 const topLinks = document.getElementsByClassName("top-link");
+
+// Burger
 burger.addEventListener("click", () => {
   sideMenu.classList.toggle("visible");
   burger.classList.toggle("rotate");
@@ -96,6 +99,7 @@ burger.addEventListener("click", () => {
   }
 });
 
+// Top links
 for (let y of topLinks) {
   y.addEventListener("click", function () {
     for (let i = 0; i < topLinks.length; i++) {
@@ -105,6 +109,7 @@ for (let y of topLinks) {
   });
 }
 
+// Side links
 for (let x of links) {
   x.addEventListener("click", function () {
     for (let i = 0; i < links.length; i++) {
@@ -115,6 +120,7 @@ for (let x of links) {
   });
 }
 
+// Removing selected classes on window events (resize, scroll, keydow, keyup)
 window.addEventListener("resize", () => {
   if (window.innerWidth > 767) {
     sideMenu.classList.remove("visible");
@@ -124,3 +130,16 @@ window.addEventListener("resize", () => {
     }
   }
 });
+
+window.addEventListener("wheel", removeSelected);
+window.addEventListener("keydown", removeSelected);
+window.addEventListener("keyup", removeSelected);
+
+function removeSelected() {
+  for (let x of links) {
+    x.classList.remove("selected-link");
+  }
+  for (let y of topLinks) {
+    y.classList.remove("top-link-selected");
+  }
+}
