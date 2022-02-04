@@ -148,3 +148,16 @@ function removeSelected() {
     y.classList.remove("top-link-selected");
   }
 }
+
+// Scrolling to top on logo-click
+
+const logoTop = document.getElementById("logo-top");
+logoTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  for (let x of links) {
+    x.classList.remove("selected-link");
+  }
+  for (let y of topLinks) {
+    y.classList.remove("top-link-selected");
+  }
+});

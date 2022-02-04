@@ -11,6 +11,9 @@
     max-width: $max-width;
     margin: 0 auto;
 
+    #logo-top:hover {
+      cursor: pointer;
+    }
     div {
       display: flex;
       align-items: center;
