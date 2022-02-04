@@ -96,9 +96,9 @@
       border: 2px solid $green-accent;
       background-color: white;
       margin-right: 20px;
+      opacity: 1;
       transition: 0.5s;
       transition: transform 0.3s;
-      opacity: 1;
 
       &:hover {
         cursor: pointer;

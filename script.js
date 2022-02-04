@@ -104,6 +104,23 @@ burger.addEventListener("click", () => {
   }
 });
 
+// Burger closes on click outside of side-menu
+let ignoreClickOnMeElement = document.getElementById("side-menu");
+let ignoreClickOnMeElement2 = document.querySelector(".burger");
+document.addEventListener("click", function (event) {
+  let isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
+  let isClickInsideElement2 = ignoreClickOnMeElement2.contains(event.target);
+
+  if (
+    !isClickInsideElement &&
+    !isClickInsideElement2 &&
+    sideMenu.classList.contains("visible")
+  ) {
+    sideMenu.classList.remove("visible");
+    burger.classList.remove("rotate");
+  }
+});
+
 // Top links
 for (let y of topLinks) {
   y.addEventListener("click", function () {
