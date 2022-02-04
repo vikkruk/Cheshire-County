@@ -57,7 +57,7 @@
 }
 
 #side-menu {
-  background-color: $black-accent;
+  background-color: #1c1c1ced;
   @include flex-column;
   transform: translateX(-200px);
   transition: all 0.5s;
@@ -113,7 +113,7 @@
 
   &::after {
     background-color: $red-accent;
-    border-radius: 5px;
+    border-radius: 5px 20px 20px 5px;
     content: "";
     top: 20px;
     left: -12px;
