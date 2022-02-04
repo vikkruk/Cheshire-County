@@ -688,22 +688,26 @@
             oninput="this.setCustomValidity('')"
           />
           <div class="contact-separator">
-            <input
-              type="radio"
-              name="contact"
-              id="personal"
-              value="personal"
-              required
-            />
-            <label for="personal">PERSONAL</label>
-            <input
-              type="radio"
-              name="contact"
-              id="company"
-              value="company"
-              required
-            />
-            <label for="company">COMPANY</label><br />
+            <div class="personal">
+              <input
+                type="radio"
+                name="contact"
+                id="personal"
+                value="personal"
+                required
+              />
+              <label for="personal">PERSONAL</label>
+            </div>
+            <div class="company">
+              <input
+                type="radio"
+                name="contact"
+                id="company"
+                value="company"
+                required
+              />
+              <label for="company">COMPANY</label><br />
+            </div>
           </div>
           <button type="submit" form="form2">SEND</button>
         </div>

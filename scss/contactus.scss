@@ -45,8 +45,22 @@
         }
       }
       .contact-separator {
+        display: flex;
         margin-top: 20px;
         text-align: left;
+
+        .personal {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+        }
+
+        .company {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+        }
+
         input[type="radio"] {
           @include input-radio;
           &::before {
@@ -79,11 +93,8 @@
         }
 
         label:nth-of-type(1) {
-          margin-right: 30px;
-          color: black;
-          opacity: 0.5;
-        }
-        label:nth-of-type(2) {
+          margin-right: 20px;
+          margin-top: 2px;
           color: black;
           opacity: 0.5;
         }
@@ -110,5 +121,16 @@
 @media (max-width: 768px) {
   .form-wrapper {
     padding: 33px 35px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-wrapper {
+    padding: 33px 25px !important;
+  }
+
+  .contact-separator {
+    flex-direction: column;
+    gap: 10px;
   }
 }
