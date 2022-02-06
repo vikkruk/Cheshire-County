@@ -70,6 +70,15 @@ article {
   }
 
   .logo {
-    width: 80% !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 450px) {
+  article {
+    padding: 50px 30px;
+    .logo {
+      margin-bottom: 0px;
+    }
   }
 }

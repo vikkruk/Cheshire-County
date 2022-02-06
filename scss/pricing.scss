@@ -24,6 +24,7 @@
     max-width: $max-width;
     height: 100%;
     margin: 0 auto;
+    position: relative;
     .swiper-wrapper {
       align-items: flex-end;
       margin-bottom: 30px;
@@ -90,6 +91,25 @@
         }
       }
     }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: $black-accent;
+      transition: 0.3s;
+      position: absolute;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    .swiper-button-prev {
+      left: -20px;
+    }
+
+    .swiper-button-next {
+      right: -20px;
+    }
     .swiper-pagination-bullet {
       height: 15px;
       width: 15px;
@@ -115,5 +135,12 @@
 @media (max-width: 450px) {
   .card {
     max-width: 300px !important;
+  }
+  .swiper-button-prev {
+    left: -30px !important;
+  }
+
+  .swiper-button-next {
+    right: -30px !important;
   }
 }

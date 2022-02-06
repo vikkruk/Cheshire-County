@@ -90,11 +90,10 @@
                 type="text"
                 name="fname"
                 id="fname"
-                required
                 placeholder="First Name"
+                required
                 oninvalid="this.setCustomValidity('Please enter your First Name')"
                 oninput="this.setCustomValidity('')"
-                pattern="[A-Za-z]{1-30}"
               />
               <label for="lname"></label>
               <input
@@ -423,6 +422,8 @@
             </div>
           </div>
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
         <div class="swiper-pagination2"></div>
       </div>
     </section>
@@ -691,7 +692,7 @@
             id="phone"
             required
             placeholder="Phone Number"
-            oninvalid="this.setCustomValidity('Please enter your Last Name')"
+            oninvalid="this.setCustomValidity('Please enter your Phone Number')"
             oninput="this.setCustomValidity('')"
           />
           <div class="contact-separator">

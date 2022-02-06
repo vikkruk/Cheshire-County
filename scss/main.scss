@@ -230,3 +230,11 @@ main {
     }
   }
 }
+
+@media (max-width: 300px) {
+  .main-wrapper {
+    .main-logo {
+      margin-left: -10px !important;
+    }
+  }
+}
